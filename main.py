@@ -18,7 +18,7 @@ def get_robots_txt(client: httpx.Client, target: str, response: str) -> None:
             robots.add(url)
         cprint("Robots.txt found", "blue")
         print(robots)
-
+#yes
   def display_webpage_description(soup: BeautifulSoup) -> None:
     """Print all meta tags found in page.
 
