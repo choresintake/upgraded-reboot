@@ -7,7 +7,7 @@ def get_robots_txt(client: httpx.Client, target: str, response: str) -> None:
     """
     cprint("[*]Checking for Robots.txt", "yellow")
     url = target
-    target = "{0.scheme}://{0.netloc}/".format(urlsplit(url))
+    target = "{0.scheme}://{0.netloc}/".format(urlsplit(url))#good
     client.get(target + "robots.txt")
     print(target + "robots.txt")
     matches = re.findall(r"Allow: (.*)|Disallow: (.*)", response)
